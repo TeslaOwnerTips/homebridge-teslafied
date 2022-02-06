@@ -299,8 +299,8 @@ sudo raspi-config
                 }
             ],
             "_bridge": {
-                "name": "TeslaFiED 400-11-400",
-                "username": "0E:62:9B:52:DC:77",
+                "name": "TeslaFiED",
+                "username": "0E:62:9B:04:20:69",
                 "port": 48699
             },
             "platform": "HttpWebHooks"
@@ -323,3 +323,13 @@ Replace the value for http_auth_pass with the TeslaFi API token.
  Wake up the vehicle.
 
 ## Restart/Reboot the hombridge computer
+![Screen Shot 2022-02-06 at 5 00 24 PM](https://user-images.githubusercontent.com/78335749/152703160-916f8c5f-c721-4bad-90a1-7e5e223d9dda.png)
+
+## Add TeslaFiED as a accessory to Apple Home
+The pin is the same pin as the one used to homebridge. Look for:
+```json
+        "pin": "420-69-420",
+        "port": 12345,
+        "username": "ef:56:9cd:34:ad:12",
+        "name": "xyz"
+```
