@@ -60,6 +60,9 @@ sudo raspi-config
 ![Screen Shot 2022-02-06 at 3 56 01 PM](https://user-images.githubusercontent.com/78335749/152700979-447d78d1-2f7c-4e6f-b7ad-23dbdd7f2576.png)
 
 ## Edit config.json
+<details> 
+  <summary>Add this text to the homebridge config.json file using the web UI.</summary> 
+
 ```json
         {
             "webhook_port": "51828",
@@ -297,3 +300,4 @@ sudo raspi-config
             "platform": "HttpWebHooks"
         }
 ```
+</details>
