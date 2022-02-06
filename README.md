@@ -61,7 +61,13 @@ sudo raspi-config
 
 ## Edit config.json
 <details> 
-  <summary>Add this text to the homebridge config.json file using the web UI.</summary> 
+  <summary>Using "Config" in the Web UI add the text below to the platforms section.
+   
+ ![Screen Shot 2022-02-06 at 4 27 30 PM](https://user-images.githubusercontent.com/78335749/152702324-878aab49-fe16-4223-9454-3025dd28f27e.png)
+   
+ </summary> 
+ 
+ Place a comma after the preceeding closing brace "},". 
 
 ```json
         {
@@ -301,3 +307,19 @@ sudo raspi-config
         }
 ```
 </details>
+
+Replace the value for http_auth_pass with the TeslaFi API token.
+```json
+            "http_auth_user": "dgd",
+            "http_auth_pass": "xfghfdhh",
+```
+![Screen Shot 2022-02-06 at 4 47 01 PM](https://user-images.githubusercontent.com/78335749/152702710-6aeb80a6-960a-47b9-b03f-ca03ac6a6b69.png)
+
+![Screen Shot 2022-02-06 at 4 48 21 PM](https://user-images.githubusercontent.com/78335749/152702752-39ed7658-5776-4142-b73c-380950e9a981.png)
+
+![Screen Shot 2022-02-06 at 4 51 26 PM](https://user-images.githubusercontent.com/78335749/152702858-a3da37b1-baef-4304-98c6-faac0baccc77.png)
+
+## Wake
+ Wake up the vehicle.
+
+## Restart/Reboot the hombridge computer
