@@ -326,6 +326,14 @@ Replace the value for http_auth_pass with the TeslaFi API token.
 ![Screen Shot 2022-02-06 at 5 00 24 PM](https://user-images.githubusercontent.com/78335749/152703160-916f8c5f-c721-4bad-90a1-7e5e223d9dda.png)
 
 ## Add TeslaFiED as a accessory to Apple Home
+- Create a room "Tesla's"
+- Select the room
+- Add an accessory
+- 
+![IMG_2342](https://user-images.githubusercontent.com/78335749/152703671-880b79ff-daa0-46e1-9683-6d9130280bd0.jpeg)
+
+![IMG_2343](https://user-images.githubusercontent.com/78335749/152703678-21978080-937d-48d0-90e2-9c088916fac7.jpeg)
+
 The pin is the same pin as the one used to homebridge. Look for:
 ```json
         "pin": "420-69-420",
