@@ -80,12 +80,12 @@ IWHITE='\033[0;97m'       # White
   resume_command=$($teslafied_updater --resume-command)
 
 ## TeslaFi
-        teslafi_url_with_key=$($teslafied_updater --teslafi-url-with-key)
+	teslafi_url_with_key=$($teslafied_updater --teslafi-url-with-key)
 
 # Receive command
 wait_for_a_command () {
       [ $debug -gt 0 ] && $log_message "${YELLOW}[$self]${NO_COLOR} ${LINENO}: waiting"
-        received=$( echo -e "$command_reply" | nc -l $port 2>>$self_error_file )
+	received=$( echo -e "$command_reply" | nc -l $port 2>>$self_error_file )
       [ $debug -gt 0 ] && $log_message "${YELLOW}[$self]${NO_COLOR} ${LINENO}: received ${GREEN}~$received~${NO_COLOR}"
 }
 
@@ -167,23 +167,23 @@ send_after_delay () {
 
 calulate_delay () {
   # This could be rewritten with a for loop to support different limit heuristics
-        [ "$first_request_time" = "" ] && { first_request_time=$SECONDS; delay=0; return 0; }
-        [ "$second_request_time" = "" ] && { second_request_time=$SECONDS; return 0; }
-        [ "$third_request_time" = "" ] && { third_request_time=$SECONDS; return 0; }
-        fourth_request_time=$SECONDS
+	[ "$first_request_time" = "" ] && { first_request_time=$SECONDS; delay=0; return 0; }
+	[ "$second_request_time" = "" ] && { second_request_time=$SECONDS; return 0; }
+	[ "$third_request_time" = "" ] && { third_request_time=$SECONDS; return 0; }
+	fourth_request_time=$SECONDS
 
-        let interval=fourth_request_time-first_request_time
-        [ $interval -lt $cmd_limit_window ] \
-                && let delay=cmd_limit_window-interval \
-                || delay=0
+	let interval=fourth_request_time-first_request_time
+	[ $interval -lt $cmd_limit_window ] \
+ 		&& let delay=cmd_limit_window-interval \
+ 		|| delay=0
 
-        let new_fourth_request_time=fourth_request_time+delay
+	let new_fourth_request_time=fourth_request_time+delay
 
-        first_request_time=$second_request_time
-        second_request_time=$third_request_time
-        third_request_time=$new_fourth_request_time
+	first_request_time=$second_request_time
+	second_request_time=$third_request_time
+	third_request_time=$new_fourth_request_time
 
-        return 0
+	return 0
 }
 
 # -------------------------------------
@@ -195,10 +195,10 @@ calulate_delay () {
 $log_message "${YELLOW}[$self] Checking if port $port is available.${NO_COLOR}"
 count=$(pgrep -c -f $port)
 [ "$count" -gt 0 ] \
-        && {
-                        $log_error "${IYELLOW}$self: $port already in use. Quitting.\n\tIf teslaFiED is not working please restart the computer.${NO_COLOR}"
-                        exit 1
-                }
+	&& {
+			$log_error "${IYELLOW}$self: $port already in use. Quitting.\n\tIf teslaFiED is not working please restart the computer.${NO_COLOR}"
+			exit 1
+		}
 
 line="${YELLOW}[$self]${NO_COLOR}: ${IYELLOW}Starting server on port $port.${NO_COLOR}"
 line="$line\n\tWebhook urls http://localhost:$port/<teslaFi API command>"
@@ -211,7 +211,7 @@ $log_message "$line"
 
 while true;
 do
-        wait_for_a_command
+ 	wait_for_a_command
   parse_command \
     && { # if parsed okay
           # Server or TeslaFi command
@@ -226,3 +226,4 @@ do
 done
 
 exit 1
+
