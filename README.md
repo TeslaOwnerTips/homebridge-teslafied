@@ -330,6 +330,7 @@ Replace the value for http_auth_pass with the TeslaFi API token.
 - Select the room
 - Add an accessory
 - More options...
+
 ![IMG_2342](https://user-images.githubusercontent.com/78335749/153034183-a1ff9b35-f699-4e16-ab43-b4c357e952fa.jpeg)![IMG_2343](https://user-images.githubusercontent.com/78335749/153034230-27740a0d-7c0b-47a9-9b16-f003a0c18e7d.jpeg)
 
 
