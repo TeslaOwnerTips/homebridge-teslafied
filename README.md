@@ -35,25 +35,25 @@ Me.
 ## Open a terminal
 ![Screen Shot 2022-02-06 at 3 26 26 PM](https://user-images.githubusercontent.com/78335749/152700604-e7567678-0258-4f7e-ab9c-3765d73f4d23.png)
 
-## Create the directory
-```
+## Create the teslaFiED folder
+```bash
 mkdir /home/pi/teslaFiED
 ```
 ## Get the scripts
-```
+```bash
 curl -o /home/pi/teslaFiED/teslaFiED_updater.sh https://raw.githubusercontent.com/TeslaOwnerTips/homebridge-teslafied/main/teslaFiED/teslaFiED_server.sh
 ```
-```
+```bash
 curl -o /home/pi/teslaFiED/teslaFiED_server.sh https://raw.githubusercontent.com/TeslaOwnerTips/homebridge-teslafied/main/teslaFiED/teslaFiED_updater.sh
 ```
 ## Edit .bashrc
-```
+```bash
 echo "/home/pi/teslaFiED/teslaFiED_server.sh" >> /home/pi/.bashrc
 echo "sleep 2"
 echo "/home/pi/teslaFiED/teslaFiED_updater.sh" >> /home/pi/.bashrc
 ```
 ## Auto Login
-```
+```bash
 sudo raspi-config 
 ```
 ![Screen Shot 2022-02-06 at 3 53 38 PM](https://user-images.githubusercontent.com/78335749/152700913-cebc5839-870c-4d2a-b133-eace87163ce1.png)
@@ -320,12 +320,12 @@ Replace the value for http_auth_pass with the TeslaFi API token.
 ![Screen Shot 2022-02-06 at 4 51 26 PM](https://user-images.githubusercontent.com/78335749/152702858-a3da37b1-baef-4304-98c6-faac0baccc77.png)
 
 ## Wake
- Wake up the vehicle.
+ Wake up the vehicle; Open the Tesla app and wait for the vehicle to connect.
 
 ## Restart/Reboot the hombridge computer
 ![Screen Shot 2022-02-06 at 5 00 24 PM](https://user-images.githubusercontent.com/78335749/152703160-916f8c5f-c721-4bad-90a1-7e5e223d9dda.png)
 
-## Add TeslaFiED as a accessory to Apple Home
+## Add TeslaFiED accessories to Apple Home
 - Create a room "Tesla's"
 - Select the room
 - Add an accessory
