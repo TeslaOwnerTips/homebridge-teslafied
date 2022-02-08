@@ -329,10 +329,10 @@ Replace the value for http_auth_pass with the TeslaFi API token.
 - Create a room "Tesla's"
 - Select the room
 - Add an accessory
-- 
-![IMG_2342](https://user-images.githubusercontent.com/78335749/152703671-880b79ff-daa0-46e1-9683-6d9130280bd0.jpeg)
+- More options...
+![IMG_2342](https://user-images.githubusercontent.com/78335749/153034183-a1ff9b35-f699-4e16-ab43-b4c357e952fa.jpeg)![IMG_2343](https://user-images.githubusercontent.com/78335749/153034230-27740a0d-7c0b-47a9-9b16-f003a0c18e7d.jpeg)
 
-![IMG_2343](https://user-images.githubusercontent.com/78335749/152703678-21978080-937d-48d0-90e2-9c088916fac7.jpeg)
+
 
 The pin is the same pin as the one used to homebridge. Look for:
 ```json
